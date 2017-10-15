@@ -1,0 +1,65 @@
+<!-- Eoghan Mc Dermott - 15345451 -->
+
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> UCD Softball </title>
+		
+		<link rel = "stylesheet" type = "text/css" href = "softball_layout.css"> <!--linking to external css sheet -->
+	</head>
+
+	<body>
+	<div class = "centre">
+		<img src = "media/squad.jpg" alt = "Team Picture"> <!-- a sort of header image-->
+	
+	
+		<ul><!-- using a list to make a navigation bar -->
+		  <li><a  href="home.html">Home<a/><li/>
+		  <li><a class="active"href="training.html">Training<a/><li/>
+		  <li><a href="sign_up.html">Sign Up<a/><li/>
+		  <li><a href="about.html">About Us<a/><li/>
+		  <li><a href="social.html">Social<a/><li/>
+		  <li><a href="intro.html">So it's like rounders, right?<a/><li/>
+		</ul>
+
+		<br/><br/><br/> <!--adding a bit of space between navigation bar and page contents-->
+		
+		<h2> TRAINING: <h2/>
+		
+		<h3> Training takes place every Tuesday and Thursday from 4-6 <h3/>
+		
+		<p> On Tuesdays, we train at the large soccer astro-turf pitch <p/>
+		
+		<div class = "map" id = "tuesday"></div><!--will insert a map in place of tuesday div tag-->
+			
+		<p> On Thursdays, we train at the rugby astro-turf pitch <p/>
+		
+		<div class = "map" id = "thursday"></div><!--will insert a map in place of thursday div tag-->
+		
+		<script>				
+				function trainingMap() {//couldn't get script to work externally - had to be in same page
+					var map_properties= {center:new google.maps.LatLng(53.3083039,-6.2287855),zoom:16};//lat long for ucd sports centre
+					//map_properties is universal to both map elements
+					
+					var soccer_loc = new google.maps.LatLng(53.3093767,-6.2299724);//lat long value of soccer pitch
+					var soccer_marker = new google.maps.Marker({position:soccer_loc});
+					
+					var tuesday_map=new google.maps.Map(document.getElementById("tuesday"),map_properties);//creating map
+					
+					soccer_marker.setMap(tuesday_map);//adding marker to map
+					//tuesday map stuff finished
+					
+					var rugby_loc = new google.maps.LatLng(53.309437, -6.231090);//lat long value of rugby pitch
+					var rugby_marker = new google.maps.Marker({position:rugby_loc});
+					
+					var thursday_map=new google.maps.Map(document.getElementById("thursday"),map_properties);//creating map
+					
+					rugby_marker.setMap(thursday_map);	
+				}	
+			</script>
+			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWkM9YwVmXhIY2cT9lSimZB9yLuP8WOtU&callback=trainingMap"></script>
+			<!--need this link to google maps api i created for map to display-->
+	</div>
+	</body>
+</html>

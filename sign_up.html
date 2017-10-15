@@ -1,0 +1,53 @@
+<!-- Eoghan Mc Dermott - 15345451-->
+
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Sign Up </title>
+		
+		<link rel = "stylesheet" type = "text/css" href = "softball_layout.css"> <!--linking to external css sheet -->
+		
+		<script type="text/javascript" src="softball_javascript.js"></script><!--linking to external javascript -->
+	</head>
+
+<body>
+		<div class = "centre">	
+			<img src = "media/squad.jpg" alt = "Team Picture"> <!-- a sort of header image-->
+	
+			<ul><!-- using a list to make a navigation bar -->
+			  <li><a href="home.html">Home<a/><li/>
+			  <li><a href="training.html">Training<a/><li/>
+			  <li><a class="active" href="sign_up.html">Sign Up<a/><li/>
+			  <li><a href="about.html">About Us<a/><li/>
+			  <li><a href="social.html">Social<a/><li/>
+			  <li><a href="intro.html">So it's like rounders, right?<a/><li/>
+			<ul/>
+		
+			<br/><br/><br/><br/>
+
+				<form>
+
+				<input type = "text" id = "firstname" value = "Firstname">
+				<input type = "text" id = "surname" value = "Surname">
+				
+				<br><br> <!-- just spacing things out a bit -->
+				
+				<input type = "text" id = "student_num" value = "Student Number">
+				<br/>
+				<input type = "text" id = "age" value = "Age">
+
+				<br><br> <!-- just spacing things out a bit -->
+				
+				Have you played softball before? <br/>
+				<input type = "radio" value = "yes" checked>Yes
+				<br>
+				<input type = "radio" value = "no">No
+				
+				<br><br> <!-- just spacing things out a bit -->
+
+				<input type = "button" onclick="validate (document.getElementById('firstname').value,document.getElementById('surname').value,document.getElementById('student_num').value,document.getElementById('age').value)" value = "Submit">
+				
+			</form>
+		<div/>
+	</body>
+</html>
